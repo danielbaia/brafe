@@ -1,0 +1,275 @@
+/*****RESET*****/
+
+body,
+h1,
+h2,
+a,
+li,
+ul,
+img,
+span,
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #252525;
+}
+
+
+/*****VARIABLE****/
+
+:root {
+    --color-header-info: #d6d3c8;
+    --color-text-body: #252525;
+    --color-background-filter: #E7E4D8;
+}
+
+
+/*****HEADER*****/
+
+.header-info {
+    font-size: 0.875em;
+    background: var(--color-header-info);
+    text-align: center;
+    padding: 6px 0;
+}
+
+.header-logo img {
+    display: block;
+    margin: 40px auto;
+}
+
+
+/*****MENU*****/
+
+.header-menu {
+    border-top: 3px solid var(--color-header-info);
+    border-bottom: 3px solid var(--color-header-info);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.header-menu ul li {
+    display: inline-block;
+}
+
+.header-menu ul li a {
+    color: var(--color-text-body);
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+.header-menu ul li::before {
+    content: '•';
+}
+
+.header-menu ul li:first-child a::before {
+    content: '';
+}
+
+
+/*****CONTEUDO*****/
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container::before,
+.container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@media(min-width:740px) and (max-width: 960px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media(max-width: 739px) {
+    .container {
+        max-width: 300px;
+    }
+}
+
+.filter {
+    width: 300px;
+    background: var(--color-background-filter);
+    margin: 0 10px;
+    padding: 20px;
+    border: 3px solid #C0BEB4;
+    float: left;
+}
+
+.filter::before,
+filter::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.filter h2 {
+    font-size: 1.125em;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.filter ul {
+    border-top: 3px solid #C0BEB4;
+    border-bottom: 3px solid #C0BEB4;
+    padding: 10px 0;
+}
+
+.filter ul li {
+    font-style: italic;
+    font-size: 1.125em;
+    line-height: 2em;
+}
+
+.filter ul li::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #C0BEB4;
+    float: right;
+    margin-top: 5px;
+}
+
+.flavor {
+    overflow: hidden;
+}
+
+.flavor span {
+    display: inline-block;
+    text-indent: -200px;
+    background: currentColor;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+span.flavor-1 {
+    color: #492901;
+    box-shadow: 20px 0 0 0 currentColor, 40px 0 0 0 currentColor;
+}
+
+span.flavor-2 {
+    color: #C17139;
+    box-shadow: 20px 0 0 0 currentColor, 40px 0 0 0 currentColor, 60px 0 0 0 currentColor;
+}
+
+span.flavor-3 {
+    color: #D7A54D;
+    box-shadow: 20px 0 0 0 currentColor, 40px 0 0 0 currentColor, 60px 0 0 0 currentColor, 80px 0 0 0 currentColor;
+}
+
+@media(min-width:740px) and (max-width: 960px) {
+    .container {
+        max-width: 720px;
+    }
+    .filter {
+        width: 220px;
+    }
+}
+
+@media(max-width: 739px) {
+    .container {
+        max-width: 300px;
+    }
+    .filter {
+        display: none;
+    }
+}
+
+
+/*****PRODUTOS*****/
+
+.products {
+    max-width: 620px;
+    margin: 0 10px;
+    float: left;
+}
+
+.products h1 {
+    font-size: 3em;
+    font-style: normal;
+}
+
+.products li {
+    width: 300px;
+    float: left;
+}
+
+.products li:nth-child(even) {
+    margin-left: 20px;
+}
+
+.products li img {
+    display: block;
+    max-width: 100%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--color-text-body);
+    margin: 40px 3px 0px 3px;
+}
+
+.products li span {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: var(--color-background-filter);
+    padding: 10px;
+    position: relative;
+    top: -15px;
+}
+
+.products li h2 {
+    font-size: 0.875em;
+    font-weight: normal;
+}
+
+@media(min-width:740px) and (max-width: 960px) {
+    .products {
+        width: 460px;
+    }
+    .products li {
+        width: 220px;
+    }
+}
+
+@media(max-width: 739px) {
+    .products {
+        width: 300px;
+    }
+    .products li {
+        width: 140px;
+    }
+}
+
+
+/*****FOOTER*****/
+
+footer {
+    background: var(--color-background-filter);
+    margin-top: 40px;
+    padding: 30px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.125em;
+}
