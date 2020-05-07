@@ -13,8 +13,11 @@ li {
     list-style: none;
 }
 
-body {
+* {
     box-sizing: border-box;
+}
+
+body {
     background: #E7E4D8;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -22,6 +25,10 @@ body {
 img {
     display: block;
     max-width: 100%;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -97,6 +104,7 @@ img {
 .side-menu li {
     display: block;
     padding: 20px;
+    border-bottom: 1px solid #707070;
 }
 
 .side-menu li a {
@@ -104,7 +112,6 @@ img {
     font-size: 1.125em;
     text-decoration: none;
     color: #fff;
-    border-bottom: 1px solid #707070;
 }
 
 .side-menu li a::before {
@@ -150,25 +157,25 @@ img {
 
 @media(max-width:739px) {
     .side-menu {
-        margin: 15px 0 0 15px;
+        margin: 0 auto;
         background: none;
         width: auto;
     }
     .side-menu li {
         display: inline-block;
-        padding: 15px;
+        border: none;
+        padding: 10px 0 0 0;
     }
     .side-menu li a::before {
         display: block;
-        top: 0px;
-        margin: 0px;
+        top: 0;
+        margin: 0;
     }
     .side-menu li a {
-        width: 24px;
-        height: 24px;
+        width: 44px;
+        height: 44px;
         overflow: hidden;
         padding: 10px;
-        border: none;
         color: #252525;
         background: #252525;
         border-radius: 4px;
@@ -268,6 +275,32 @@ img {
     font-weight: bold;
     display: inline-block;
     width: 70px;
+}
+
+@media (min-width: 740px) and (max-width:960px) {
+    .produtos {
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width:739px) {
+    .produtos {
+        width: 100%;
+    }
+    .produtos h1 {
+        float: none;
+    }
+    .adicionar-produtos {
+        float: none;
+        display: inline-block;
+        margin: 10px 0;
+    }
+    .item-produtos img {
+        float: none;
+    }
+    .item-produtos ul {
+        width: 100%;
+    }
 }
 
 
